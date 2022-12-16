@@ -41,7 +41,7 @@ bool IsFree(const int row, const int col, const char board[3][3])
     return (board[row][col] == '-'); // if it is / then it means it is empty i.e. free
 }
 
-bool hasWon(char symbol)
+bool hasWon(char symbol, char board[3][3])
 {
     int row = 0;
     int col = 0;
@@ -74,6 +74,7 @@ int main()
 {
     // int randomNumber = rand();
     srand(time(NULL));
+    char board[3][3];
     bool gameOver = false;
 
     int row = 0;
@@ -103,7 +104,7 @@ int main()
         count += 1;
         if (count == 9)
         {
-            gameOver = hasWon(player);
+            gameOver = hasWon(player, board);
             Display(board);
         }
     }

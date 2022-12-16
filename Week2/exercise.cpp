@@ -58,11 +58,23 @@ int main()
     {
         do
         {
-            row = rand() % 2 + 1;
-            col = rand() % 2 + 1;
+            row = rand() % 3;
+            col = rand() % 3;
+        } while (!IsFree(row, col, board));
+        SetValue(row, col, player, board);
+        if (player == PLAYER_1)
+        {
+            player = PLAYER_2;
         }
-        while (!isFree(row, col, board))
+        else
+        {
+            player = PLAYER_1;
+        }
+        count += 1;
+        if (count == 9)
+        {
+            gameOver = true;
+            Display(board);
+        }
     }
 }
-
-

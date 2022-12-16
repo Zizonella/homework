@@ -1,5 +1,6 @@
 #include <iostream>
 #include "GlobalVar.h"
+//#include "globalVariabiable.cpp"
 using namespace std;
 
 // for some reason couldn't reach those. Import problem?

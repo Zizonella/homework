@@ -1,9 +1,9 @@
 #include <iostream>
 #include "GlobalVar.h"
-//#include "globalVariabiable.cpp"
+// #include "globalVariabiable.cpp"
 using namespace std;
 
-// for some reason couldn't reach those. Import problem?
+// for some reason couldn't reach those. Import problem? It was a typo :(
 // extern const char PLAYER_1;
 // extern const char PLAYER_2;
 // extern char board[3][3];
@@ -41,16 +41,45 @@ bool IsFree(const int row, const int col, const char board[3][3])
     return (board[row][col] == '-'); // if it is / then it means it is empty i.e. free
 }
 
+bool hasWon(char symbol)
+{
+    int row = 0;
+    int col = 0;
+    bool match = false;
+    for (int i = 0; i < 8; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            row = winningStates[i][j][0];
+            col = winningStates[i][j][1];
+            if (board[row][col] == symbol)
+            {
+                match = true;
+            }
+            else
+            {
+                match = false;
+                break;
+            }
+        }
+        if (match)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
 int main()
 {
-    int randomNumber = rand();
+    // int randomNumber = rand();
+    srand(time(NULL));
     bool gameOver = false;
 
     int row = 0;
     int col;
     char player = PLAYER_1;
     int count = 0;
-    cout << "this test" << endl;
 
     Initialise(board);
     Display(board);
@@ -74,7 +103,7 @@ int main()
         count += 1;
         if (count == 9)
         {
-            gameOver = true;
+            gameOver = hasWon(player);
             Display(board);
         }
     }

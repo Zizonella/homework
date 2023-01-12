@@ -50,35 +50,17 @@ int main()
     std::time_t result = std::time(nullptr);
     std::cout << std::asctime(std::localtime(&result))
               << result << " seconds since the Epoch\n";
-    return 0;
+    int minutes = result / 60;
+    int hours = minutes / 60;
+    cout << "This means that: " << result << " in H:M:S format is equivalent to: " << endl
+         << int(hours) << " hours " << int(minutes % 60)
+         << " mins " << int(result % 60) << " secs.";
 
-    // cout << firstJob::globalSalary << endl;
-    // cout << secondJob::globalSalary << endl;
+    return 0;
 }
 
-// #include <iostream>
-// #include <vector>
-
-// int main()
-// {
-//     int n = 15, t1 = 0, t2 = 1, nextTerm = 0;
-
-//     for (int i = 1; i <= n; i++)
-//     {
-//         if (i == 1)
-//         {
-//             std::cout << t1 << ", ";
-//             continue;
-//         }
-//         if (i == 1)
-//         {
-//             std::cout << t2 << ", ";
-//             continue;
-//         }
-//         nextTerm = t1 + t2;
-//         t1 = t2;
-//         t2 = nextTerm;
-//         std::cout << nextTerm << ", ";
-//     }
-//     return 0;
-// }
+/* QUIZ ANSWERS
+Exercise 8
+1: i = 30;
+2: a value of type "char *" cannot be used to initialize an entity of type "float *"C/C++(144)
+*/

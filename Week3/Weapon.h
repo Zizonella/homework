@@ -10,8 +10,10 @@ class Weapon
 public:
     
     Weapon();
+    
     ~Weapon();
     bool Fire();
+    bool Fire(int burstRounds);
     void Reload();
 
 private:

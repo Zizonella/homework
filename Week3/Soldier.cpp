@@ -11,7 +11,10 @@ void Soldier::FiringWeapon()
 {
     Weapon *weapon;
     weapon = new Weapon();
-    weapon->Fire();
+    if (possibleStates != crawl)
+    {
+        weapon->Fire();
+    }
 
     // cout << "Firing Weapon" << endl;
 }

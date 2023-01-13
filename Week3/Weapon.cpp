@@ -20,6 +20,18 @@ bool Weapon::Fire()
     return false;
 }
 
+bool Weapon::Fire(int burstRound)
+{
+    if (rounds != 0)
+    {
+        rounds--;
+        cout << "Automatic Weapon Fire" << endl;
+        return true;
+    }
+    else
+        return false;
+}
+
 void Weapon::Reload()
 {
     cout << "Reloading" << endl;

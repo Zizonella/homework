@@ -14,7 +14,7 @@ int main()
     person->Run();
 
     Soldier *soldier;
-    soldier = new Soldier;
+    soldier = new Soldier(new Weapon()); // part 3 we need to add the weapon
     soldier->Stand();
     soldier->FiringWeapon();
     return 0;

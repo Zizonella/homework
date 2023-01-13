@@ -17,7 +17,9 @@ have to explicitly initialise the elements of ranges.
 #include <ctime>
 using namespace std;
 
-string ranges(int result)
+string ranges[4];
+
+string rangesb(int result)
 {
     string range = "";
     if (result >= 0 && result <= 40)
@@ -50,27 +52,33 @@ int main()
     for (int i = 0; i < 100; i++)
     {
         scores[i] = 1 + (rand() % 100);
-        if (ranges(scores[i]) == "novice")
+        if (rangesb(scores[i]) == "novice")
         {
             noviceCounter++;
         }
-        if (ranges(scores[i]) == "itermediate")
+        if (rangesb(scores[i]) == "itermediate")
         {
             intermediateCounter++;
         }
-        if (ranges(scores[i]) == "advanced")
+        if (rangesb(scores[i]) == "advanced")
         {
             advancedCounter++;
         }
-        if (ranges(scores[i]) == "hardcore")
+        if (rangesb(scores[i]) == "hardcore")
         {
             hardcoreCounter++;
         }
 
-        cout << scores[i] << " Which is in the following range: " << ranges(scores[i]) << endl;
+        cout << scores[i] << " Which is in the following range: " << rangesb(scores[i]) << endl;
         cout << "Novices we have: " << noviceCounter << endl;
         cout << "Intermediates we have: " << intermediateCounter << endl;
         cout << "Advanced users we have: " << advancedCounter << endl;
         cout << "Hardcore users we have: " << hardcoreCounter << endl;
     }
 }
+/*We will now create some test code for exercise 1. Add the statements required to sum
+the values in each ranges and if it equals 100, display a pass message otherwise display a
+fail message.
+Add appropriate processor directives so that the compilation of this test code can be
+toggled on and off.*/
+

@@ -2,6 +2,7 @@
 
 Person::Person(void)
 {
+    health = 100;
 }
 
 Person::~Person(void)
@@ -9,26 +10,29 @@ Person::~Person(void)
 }
 void Person::Crawl()
 {
-    PossibleStates possibleStates;
     possibleStates = crawl;
     cout << "Crawling" << endl;
 }
 void Person::Stand()
 {
-    PossibleStates possibleStates;
     possibleStates = stand;
     cout << "Standing" << endl;
 }
 void Person::Walk()
 {
-    PossibleStates possibleStates;
     possibleStates = walk;
     cout << "Walking" << endl;
 }
 
 void Person::Run()
 {
-    PossibleStates possibleStates;
     possibleStates = run;
     cout << "Running" << endl;
+}
+
+// 6
+void Person::Damage(int damage)
+{
+    health -= damage;
+    cout << "Damaged! Ooopsie" << endl;
 }

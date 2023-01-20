@@ -9,7 +9,8 @@ class Soldier : public Person
 public:
     Soldier(Weapon *tool);
     ~Soldier();
-    void FiringWeapon();
+    void FiringWeapon(Person *person);
+    void FiringWeapon(int burstRounds, Person *person);
 
 private:
     Weapon *weapon;

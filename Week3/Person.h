@@ -15,12 +15,14 @@ public:
         walk,
         run
     }; // add enums for the possible states
+    int health;
     Person();
     ~Person();
     void Crawl();
     void Stand();
     void Walk();
     void Run();
+    void Damage(int damage);
     PossibleStates possibleStates;
 
 private:

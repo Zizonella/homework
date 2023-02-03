@@ -2,10 +2,11 @@
 
 Magic::Magic()
 {
-
 }
 
 Magic::~Magic()
 {
-
+}
+void Magic::Display()
+{
 }

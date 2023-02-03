@@ -17,9 +17,8 @@ public:
     Elementalist(string name, int knowledge, int skill, int maxMagic, TElements specialism);
     ~Elementalist();
     void Display();
-
 private:
-TElements specialism;
+    TElements specialism;
 };
 
 #endif

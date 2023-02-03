@@ -9,6 +9,7 @@ class Spellwords : public Wizard
 public:
     Spellwords(string name, int knowledge, int skill, int maxMagic, string weapon);
     ~Spellwords();
+    void Display();
 
 private:
     string weapon;

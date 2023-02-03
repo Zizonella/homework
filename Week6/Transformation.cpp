@@ -2,10 +2,9 @@
 
 Transformation::Transformation(string creature)
 {
-cout << "Transformation creature: " << creature << endl;
+    cout << "Transformation creature: " << creature << endl;
 }
 
 Transformation::~Transformation()
 {
-
 }

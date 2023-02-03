@@ -2,10 +2,9 @@
 
 Potion::Potion(int dose)
 {
-cout << "Potion dose: " << dose << endl;
+    cout << "Potion dose: " << dose << endl;
 }
 
 Potion::~Potion()
 {
-
 }

@@ -7,12 +7,10 @@ class Vehicle
 {
 public:
     Vehicle(){};
-    void Display();
+    virtual void Display(); // the virtual keyword is used to define a virtual function declared within the base class (Vehicle) and is re-defined (overridden) by a derived class (Boat, Car).
     Vehicle(int id, int damage);
 
 protected:
     int id;
-
-private:
     int damage;
 };

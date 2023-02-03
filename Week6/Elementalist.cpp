@@ -1,6 +1,6 @@
 #include "Elementalist.h"
 
-Elementalist::Elementalist(string name, int knowledge, int skill, int maxMagic, TElements specialism)
+Elementalist::Elementalist(string name, int knowledge, int skill, int maxMagic, TElements specialism) : Wizard(name, knowledge, skill, maxMagic), specialism(specialism)
 {
 }
 
